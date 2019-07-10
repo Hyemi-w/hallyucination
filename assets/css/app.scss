@@ -1,5 +1,23 @@
 @import "~bootstrap/scss/bootstrap";
+@import "_vars.scss";
+@import "~bootswatch/dist/minty/variables";
+@import "~bootswatch/dist/minty/bootswatch";
+@import url('https://fonts.googleapis.com/css?family=Abel|Barlow+Semi+Condensed|Rubik+Mono+One&display=swap');
 
-body{
-    background-color: blue;
+.navbar {
+    background-color: $primary-color;
+    border-bottom: solid 6px $secondary-color;
+    font-family: 'Abel', sans-serif;
+    .navbar-toggler {
+        color: $light;
+        font-size: 2em;
+    }
+    .nav-item {
+        margin-left: 18vw;
+        font-size: 20pt;
+        a {
+            color: $light;
+            font-weight: 400;
+        }
+    }
 }
