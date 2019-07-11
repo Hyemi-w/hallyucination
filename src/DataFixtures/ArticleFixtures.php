@@ -21,7 +21,7 @@ class ArticleFixtures extends Fixture
         $faker = Faker\Factory::create('fr_FR');
         for ($i=0; $i<=3; $i++) {
             $article = new Article();
-            $article->setTitle($faker->sentence);
+            $article->setTitle($faker->sentence(15));
             $article->setContent($faker->text);
             $article->setPicture($faker->imageUrl($width=400, $height = 200));
             $article->setDate($faker->dateTime('now'));

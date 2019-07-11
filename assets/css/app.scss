@@ -67,8 +67,29 @@ h1 {
 }
 
 .top-section {
+    margin-bottom: 2vw;
     .card {
+        color: $light;
         border-radius: 0.4rem;
-        max-width: 20rem;
+        max-width: 25rem;
+        background-color: $primary-color;
+        border: $primary-color;
+        .card-header{
+            font-family: $primary-font;
+            font-size: 20pt;
+            height: 70px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .card-body {
+            padding: 0;
+            img {
+                max-width: 100%;
+            }
+            .card-text {
+                height: 50px;
+            }
+        }
     }
 }
