@@ -28,20 +28,21 @@
         <p class="introduction">Bienvenue sur Hallyucination, ta source de news sur la vague Hallyu ! Au programme: K-music, Dramas, Cinéma,
             Concerts et plus encore...</p>
     </section>
-    <section class="top-section">
+    <section class="articles">
         <h2 class="subtitle">Ca vient de sortir</h2>
         <div class="row justify-content-around">
-            {% for article in article %}
+            {% for article in articles %}
                 <div class="card border-primary mb-3">
                     <div class="card-header">{{ article.title }}</div>
-                    <a href="#"><div class="card-body">
-                        <img src="{{ article.picture }}">
-                    </a>
-                    <h4 class="card-title"></h4>
-                    <p class="card-text">{{ article.date | date('d-m-Y') }}</p>
+                    <div class="card-body">
+                        <a href="#">
+                            <img src="{{ article.picture }}">
+                        </a>
+                        <h4 class="card-title"></h4>
+                        <p class="card-text">{{ article.date | date('d-m-Y') }}</p>
                     </div>
                 </div>
             {% endfor %}
-            </div>
+        </div>
     </section>
 {% endblock %}

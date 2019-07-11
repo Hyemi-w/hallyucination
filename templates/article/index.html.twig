@@ -3,18 +3,20 @@
 {% block title %}Hallyucination - Articles{% endblock %}
 
 {% block body %}
-<section>
-    <h1></h1>
+<section class="articles">
+    <div class="row justify-content-around">
     {% for article in articles %}
         <div class="card border-primary mb-3">
             <div class="card-header">{{ article.title }}</div>
-            <a href="#"><div class="card-body">
-                    <img src="{{ article.picture }}">
+            <div class="card-body">
+            <a href="#">
+                <img src="{{ article.picture }}">
             </a>
             <h4 class="card-title"></h4>
             <p class="card-text">{{ article.date | date('d-m-Y') }}</p>
         </div>
-        </div>
+    </div>
     {% endfor %}
+    </div>
 </section>
 {% endblock %}
