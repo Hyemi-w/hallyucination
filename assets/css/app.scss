@@ -21,7 +21,7 @@
     margin-bottom: 4vw;
 }
 
-h1 {
+.main-title {
     @include mainTitle();
     margin-top: 2vw;
     margin-bottom: 2vw;
@@ -68,6 +68,10 @@ h1 {
 
 .articles {
     margin-bottom: 2vw;
+    h1 {
+        @include subtitle();
+        margin-top: 0;
+    }
     .card {
         color: $light;
         border-radius: 0.4rem;

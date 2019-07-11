@@ -19,7 +19,7 @@ class ArticleFixtures extends Fixture
     public function load(ObjectManager $manager)
     {
         $faker = Faker\Factory::create('fr_FR');
-        for ($i=0; $i<=3; $i++) {
+        for ($i=0; $i<=15; $i++) {
             $article = new Article();
             $article->setTitle($faker->sentence(15));
             $article->setContent($faker->text);

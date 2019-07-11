@@ -17,7 +17,7 @@ class HomeController extends AbstractController
     public function index(ArticleRepository $articleRepository) : Response
     {
         return $this->render('home/index.html.twig',[
-            'article' => $articleRepository->findBy([], ['date' => 'DESC'], 3)
+            'articles' => $articleRepository->findBy([], ['date' => 'DESC'], 3)
         ]);
     }
 }

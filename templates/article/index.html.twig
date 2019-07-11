@@ -4,9 +4,11 @@
 
 {% block body %}
 <section class="articles">
+    <h1>ARTICLES</h1>
+    <p class="introduction text-center mb-5">Retrouvez tous les articles de Hallyucination !</p>
     <div class="row justify-content-around">
     {% for article in articles %}
-        <div class="card border-primary mb-3">
+        <div class="card border-primary mb-5">
             <div class="card-header">{{ article.title }}</div>
             <div class="card-body">
             <a href="#">
