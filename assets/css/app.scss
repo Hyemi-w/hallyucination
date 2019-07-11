@@ -2,7 +2,19 @@
 @import "_vars.scss";
 @import "~bootswatch/dist/minty/variables";
 @import "~bootswatch/dist/minty/bootswatch";
-@import url('https://fonts.googleapis.com/css?family=Abel|Barlow+Semi+Condensed|Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Abel|Barlow+Semi+Condensed|Rubik+Mono+One|Sniglet&display=swap');
+
+@mixin mainTitle() {
+    font-size: 60pt;
+    font-family: $main-font;
+    color: $dark;
+}
+
+h1 {
+    @include mainTitle();
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+}
 
 .navbar {
     background-color: $primary-color;
