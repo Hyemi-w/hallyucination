@@ -24,6 +24,7 @@ class ArticleFixtures extends Fixture
             $article->setTitle($faker->sentence);
             $article->setContent($faker->text);
             $article->setPicture($faker->imageUrl($width=400, $height = 200));
+            $article->setDate($faker->dateTime('now'));
             $manager->persist($article);
         }
         $manager->flush();

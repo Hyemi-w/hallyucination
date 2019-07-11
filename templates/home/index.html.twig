@@ -30,12 +30,15 @@
     </section>
     <section class="top-section">
         <h2 class="subtitle">Ca vient de sortir</h2>
+        {% for article in article %}
         <div class="card border-primary mb-3">
             <div class="card-header">Header</div>
             <div class="card-body">
-                <h4 class="card-title">Primary card title</h4>
+                <img src="{{ article.picture }}">
+                <h4 class="card-title">{{ article.title }}</h4>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
         </div>
+        {% endfor %}
     </section>
 {% endblock %}
