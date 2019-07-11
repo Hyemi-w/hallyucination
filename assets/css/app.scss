@@ -7,7 +7,7 @@
 .navbar {
     background-color: $primary-color;
     border-bottom: solid 6px $secondary-color;
-    font-family: 'Abel', sans-serif;
+    font-family: $primary-font;
     .navbar-toggler {
         color: $light;
         font-size: 2em;
@@ -19,5 +19,17 @@
             color: $light;
             font-weight: 400;
         }
+    }
+}
+
+.banner{
+    background-image: url('../images/leaves.png');
+    .banner-title{
+        position:absolute;
+        margin-top: 15vh;
+        font-family: $text-font;
+        font-weight: bold;
+        color: $light;
+        font-size: 2.5em;
     }
 }
