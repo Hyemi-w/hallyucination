@@ -16,6 +16,12 @@ h1 {
     margin-bottom: 2vw;
 }
 
+.introduction {
+    font-family: $text-font;
+    font-size: 1.2em;
+    color: $dark;
+}
+
 .navbar {
     background-color: $primary-color;
     border-bottom: solid 6px $secondary-color;
