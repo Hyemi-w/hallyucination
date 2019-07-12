@@ -67,12 +67,13 @@ h1 {
 }
 
 .top-section {
-    margin-bottom: 2vw;
+    background-color: $primary-color;
+    padding-bottom: 2vw;
     .card {
-        color: $light;
+        color: $dark;
         border-radius: 0.4rem;
         max-width: 25rem;
-        background-color: $primary-color;
+        background-color: $light;
         border: $primary-color;
         .card-header{
             font-family: $primary-font;
