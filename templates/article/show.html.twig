@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Article{% endblock %}
+
+{% block body %}
+    <section class="article">
+        <div class="pic-container row justify-content-center">
+            <img class="picture" src="{{ article.picture }}">
+        </div>
+        <h1 class="title text-center">{{ article.title }}</h1>
+        <div class="content container">
+            <p>
+                {{ article.content|nl2br }}
+            </p>
+            {% if article.video is null %}
+            {% else %}
+            <iframe width="560" height="315" src="{{ article.video }}" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            {% endif %}
+        </div>
+    </section>
+{% endblock %}

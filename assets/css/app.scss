@@ -98,3 +98,18 @@
         }
     }
 }
+
+.article {
+    .title{
+        @include subtitle();
+    }
+    .picture{
+        width: 1000px;
+        height: 500px;
+        object-fit: cover;
+    }
+    .content {
+        padding-left: 4vw;
+        padding-right: 4vw;
+    }
+}
