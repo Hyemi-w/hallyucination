@@ -68,16 +68,26 @@
 
 .articles {
     margin-bottom: 2vw;
+
     h1 {
         @include subtitle();
         margin-top: 0;
     }
+
     .card {
         margin-bottom: 4vw;
         color: $light;
+    }
+}
+
+.top-section {
+    background-color: $primary-color;
+    padding-bottom: 2vw;
+    .card {
+        color: $dark;
         border-radius: 0.4rem;
         max-width: 25rem;
-        background-color: $primary-color;
+        background-color: $light;
         border: $primary-color;
         .card-header{
             font-family: $primary-font;
