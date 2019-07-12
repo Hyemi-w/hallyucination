@@ -81,7 +81,7 @@
 }
 
 .articles {
-    margin-bottom: 2vw;
+    padding-bottom: 2vw;
     background-color: $primary-color;
     h1 {
         @include subtitle();
