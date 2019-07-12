@@ -22,7 +22,7 @@ class Article
     private $title;
 
     /**
-     * @ORM\Column(type="string", length=800)
+     * @ORM\Column(type="text")
      */
     private $content;
 
@@ -40,6 +40,16 @@ class Article
      * @ORM\Column(type="datetime")
      */
     private $date;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $author;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $source;
 
     public function getId(): ?int
     {
@@ -102,6 +112,30 @@ class Article
     public function setDate(?\DateTimeInterface $date): self
     {
         $this->date = $date;
+
+        return $this;
+    }
+
+    public function getAuthor(): ?string
+    {
+        return $this->author;
+    }
+
+    public function setAuthor(string $author): self
+    {
+        $this->author = $author;
+
+        return $this;
+    }
+
+    public function getSource(): ?string
+    {
+        return $this->source;
+    }
+
+    public function setSource(string $source): self
+    {
+        $this->source = $source;
 
         return $this;
     }
