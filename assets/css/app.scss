@@ -11,7 +11,7 @@
 }
 
 @mixin subtitle() {
-    font-size: 28pt;
+    font-size: 2em;
     font-family: $secondary-font;
     color: $dark;
     background-color: $secondary-color;
@@ -100,16 +100,25 @@
 }
 
 .article {
+    background-color: $primary-color;
+    p {
+        font-family: $text-font;
+        font-size: 1.2em;
+    }
     .title{
         @include subtitle();
+        margin: 0;
     }
     .picture{
-        width: 1000px;
-        height: 500px;
         object-fit: cover;
     }
     .content {
+        padding-top: 4vw;
+        background-color: $light;
         padding-left: 4vw;
         padding-right: 4vw;
+    }
+    .end {
+        font-style: italic;
     }
 }

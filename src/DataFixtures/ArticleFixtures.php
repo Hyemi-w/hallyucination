@@ -23,8 +23,10 @@ class ArticleFixtures extends Fixture
             $article = new Article();
             $article->setTitle($faker->sentence(15));
             $article->setContent($faker->sentence(150));
-            $article->setPicture($faker->imageUrl($width=700, $height = 400));
+            $article->setPicture($faker->imageUrl($width=1000, $height = 400));
             $article->setDate($faker->dateTime('now'));
+            $article->setAuthor($faker->word);
+            $article->setSource($faker->sentence(3));
             $manager->persist($article);
         }
         $manager->flush();

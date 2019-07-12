@@ -5,19 +5,22 @@
 {% block body %}
     <section class="article">
         <div class="pic-container row justify-content-center">
-            <img class="picture" src="{{ article.picture }}">
+            <img class="picture col-8 col-md-8 col-sm-12" src="{{ article.picture }}">
         </div>
         <h1 class="title text-center">{{ article.title }}</h1>
         <div class="content container">
             <p>
                 {{ article.content|nl2br }}
             </p>
+            <div class="row justify-content-center">
             {% if article.video is null %}
             {% else %}
             <iframe width="560" height="315" src="{{ article.video }}" frameborder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+                    allowfullscreen class="video mt-4"></iframe>
             {% endif %}
+            </div>
+            <p class="mt-5 end">Source : {{ article.source }} <br>Auteur: {{ article.author }}</p>
         </div>
     </section>
 {% endblock %}
